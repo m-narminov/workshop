@@ -1,0 +1,21 @@
+{
+  "name": "workshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "workshop.js",
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-body": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "pg": "^7.11.0",
+    "sequelize": "^5.10.0",
+    "sequelize-cli": "^5.5.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build_run": "docker build . -t wordkshop && docker run --rm -p 3000:3000 workshop"
+  },
+  "author": "",
+  "license": "ISC"
+}
