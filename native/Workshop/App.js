@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Card } from 'react-native-paper';
+import Constants from 'react';
+import { StyleSheet, Text, TextInput, Button, View } from 'react-native';
+
 
 const server = '80.93.177.192'
 
@@ -12,7 +13,7 @@ export default function App() {
   return (
     <View style={styles.container}>
         <Text style={styles.paragraph}>
-          Калмыцко - русский переводчик
+          Введите слово
         </Text>
         <TextInput
           style={styles.input}
@@ -30,16 +31,10 @@ export default function App() {
           >
           </Button>
         </View>
-        <Card
-          style={styles.card}
-        >
-          {this.
 
-          }
-        </Card>
 
     </View>
-  }
+  )
 }
 
 const styles = StyleSheet.create({
@@ -64,8 +59,8 @@ const styles = StyleSheet.create({
   input: {
     margin: 14,
     height: 50,
-    fortSize: 25,
-    fontFamily: 'verdana',
+    fontSize: 25,
+    fontFamily: 'sans-serif',
     backgroundColor: '#edeef0',
 
   },
