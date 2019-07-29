@@ -1,16 +1,17 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Constants from 'react';
 import { StyleSheet, Text, TextInput, Button, View } from 'react-native';
 
 
 const server = '80.93.177.192'
 
-export default function App() {
+export default class App extends Component {
   state = {text: ''}
   handleClick = (e) => {
-    return fetch('http://${server}/words/?word=${this.state}&langTo=russian&langFrom=kalmyk')
+    return fetch('http://${server}/words/?word=${this.state}&langTo=russian&langFrom=kalmyk').then((value) => {console.log('uyuyuyuyu',value)})
   }
-  return (
+  render () {
+    return (
     <View style={styles.container}>
         <Text style={styles.paragraph}>
           Калмыцко - русский переводчик
@@ -20,7 +21,7 @@ export default function App() {
           editable={true}
           maxLength={40}
           placeholder={'Введите слово'}
-          onChangeText={(v) => this.setState({text: v + ''})}
+          onChangeText={(v) => {this.setState({text: v + ''})}}
           value={this.state.text}
         />
         <View style={styles.viewButton}>
@@ -31,10 +32,14 @@ export default function App() {
           >
           </Button>
         </View>
+        {
+
+        }
 
 
     </View>
-  )
+  );
+  }
 }
 
 const styles = StyleSheet.create({
