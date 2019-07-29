@@ -1,3 +1,2 @@
-node_modules/
-postgresdata/
-redisdata/
+**/node_modules
+postgresdata

@@ -13,7 +13,7 @@ export default function App() {
   return (
     <View style={styles.container}>
         <Text style={styles.paragraph}>
-          Введите слово
+          Калмыцко - русский переводчик
         </Text>
         <TextInput
           style={styles.input}

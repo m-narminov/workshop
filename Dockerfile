@@ -9,7 +9,7 @@ ADD package.json package-lock.json /srv/workshop/
 
 RUN npm ci
 
-ADD ./ /srv/workshop/
+ADD ./ /srv/workshop
 
 EXPOSE 3000
 

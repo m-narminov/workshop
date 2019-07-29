@@ -4,21 +4,21 @@ services:
     image: postgres:10
     restart: always
     ports:
-     - "5432:5432"
+      - "5432:5432"
     volumes:
-     - ./postgresdata:/var/lib/postgresql/data
+      - ./postgresdata:/var/lib/postgresql/data
     environment:
-     - POSTGRES_USER=dictionary
-     - POSTGRES_PASSWORD=12345678
-     - POSTGRES_DB=dictionary
+      - POSTGRES_USER=dictionary
+      - POSTGRES_PASSWORD=12345678
+      - POSTGRES_DB=dictionary
   backend:
     build:
       context: .
       dockerfile: Dockerfile
     restart: always
     links:
-     - db:pg_database
+      - db:pg_database
     ports:
-     - "3000:3000"
+      - "3000:3000"
     depends_on:
-     - db
+      - db
